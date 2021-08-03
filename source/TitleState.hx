@@ -2,8 +2,10 @@ package;
 
 import flixel.FlxG;
 import flixel.FlxState;
+import flixel.input.gamepad.mappings.MayflashWiiRemoteMapping;
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
+import lime.graphics.Image;
 
 class TitleState extends FlxState
 {
@@ -13,22 +15,22 @@ class TitleState extends FlxState
 
 		var init_x:Int = Math.floor(FlxG.width / 2 - 40);
 
-		var btn_new = new FlxButton(init_x, 50, "New game", onNew);
+		var btn_new = new FlxButton(init_x, 50, "RPG Test", rpgTest);
 
-		var btn_load = new FlxButton(init_x, 80, "Load", onLoad);
+		var btn_load = new FlxButton(init_x, 80, "Rhythm Test", rhythmTest);
 
 		add(btn_new);
 
 		add(btn_load);
 	}
 
-	private function onNew():Void
+	private function rpgTest():Void
 	{
 		FlxG.switchState(new RPGState());
 	}
 
-	private function onLoad():Void
+	private function rhythmTest():Void
 	{
-		trace("Load...");
+		FlxG.switchState(new RhythmState());
 	}
 }
