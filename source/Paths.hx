@@ -87,14 +87,14 @@ class Paths
 
 	// Unknown if needed. Will depend on how we do music
 
-	inline static public function voices(song:String)
-	{
-		return 'assets/songs/${song.toLowerCase()}/Voices.$SOUND_EXT';
-	}
-
+	/*inline static public function voices(song:String)
+		{
+			return 'songs:assets/songs/${song.toLowerCase()}/Voices.$SOUND_EXT';
+		}
+	 */
 	inline static public function inst(song:String)
 	{
-		return 'assets/songs/${song.toLowerCase()}/Inst.$SOUND_EXT';
+		return 'songs:assets/songs/${song.toLowerCase()}/Inst.$SOUND_EXT';
 	}
 
 	inline static public function image(key:String, ?library:String)
@@ -110,11 +110,6 @@ class Paths
 	inline static public function csv(key:String, ?library:String)
 	{
 		return 'assets/data/$key.csv';
-	}
-
-	inline static public function hx(key:String, ?library:String)
-	{
-		return 'source/$key.hx';
 	}
 
 	inline static public function getSparrowAtlas(key:String, ?library:String)
